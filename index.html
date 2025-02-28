@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Green Grocery</title>
+
+    <!-- DaisyUI CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- FontAwesomeIcon -->
+    <link rel="stylesheet" href="./assets/fontawesome/css/all.min.css" />
+
+    <!-- GoogleFonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CustomGlobalStyle -->
+    <style>
+      .font-sora {
+        font-family: "Sora", sans-serif;
+      }
+      .bg-gradient-color {
+        background: #ffffff;
+        background: linear-gradient(180deg, #ffffff, #efebe3);
+      }
+    </style>
+  </head>
+  <body class="font-sora">
+    <!-- Header -->
+    <header class="bg-gradient-color">
+      <!-- Navbar -->
+      <nav class="container mx-auto py-5">
+        <div class="navbar justify-between p-0">
+          <div
+            class="w-full lg:w-auto justify-between flex-row-reverse lg:flex-row"
+          >
+            <!-- HamburgerMenu -->
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <i class="fa-solid fa-bars text-primary-color"></i>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 pr-20 w-52 p-2 shadow hidden"
+              >
+                <!-- <li><a>Product</a></li>
+                <li><a>Services</a></li>
+                <li><a>Contact Us</a></li> -->
+              </ul>
+            </div>
+
+            <!-- Logo -->
+            <a href="" class="block hover:bg-transparent md:px-4 pr-4 lg:pr-0">
+              <img
+                src="./assets/images/logo-header.png"
+                alt="Header Navbar Logo"
+                class="pl-4 lg:pl-0"
+              />
+            </a>
+          </div>
+
+          <!-- Nav Items -->
+          <div class="hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+              <li>
+                <a
+                  href=""
+                  class="text-text-primary text-base font-semibold hover:text-primary-color hover:bg-transparent"
+                  >Product</a
+                >
+              </li>
+              <li>
+                <a
+                  href=""
+                  class="text-text-primary text-base font-semibold hover:text-primary-color hover:bg-transparent"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href=""
+                  class="text-text-primary text-base font-semibold hover:text-primary-color hover:bg-transparent"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- NavButton -->
+          <div class="hidden lg:flex gap-3">
+            <a
+              class="btn bg-transparent hover:bg-primary-color border border-primary-color text-text-primary hover:text-white"
+            >
+              Login
+            </a>
+            <a
+              class="btn bg-primary-color hover:bg-transparent border hover:border-primary-color text-white hover:text-text-primary"
+            >
+              Register
+            </a>
+          </div>
+        </div>
+      </nav>
+
+      <!-- HeroSection -->
+      <section class="container mx-auto pt-5 md:pt-10 lg:pt-20">
+        <!-- HeroContent -->
+        <div class="text-center space-y-8">
+          <!-- TextContent -->
+          <div class="space-y-4 lg:space-y-8 lg:px-44">
+            <!-- HeroTitle -->
+            <h1
+              class="text-text-primary text-2xl md:text-4xl lg:text-6xl font-semibold"
+            >
+              Freshness
+              <span class="text-primary-color"
+                >You Can<br />
+                Count</span
+              >
+              On, Prices You’ll Love!
+            </h1>
+            <!-- HeroDescription -->
+            <p class="text-text-primary text-sm lg:text-xl px-10">
+              Shop your daily essentials at unbeatable prices. From fresh
+              produce to pantry staples, we’ve got you covered every day!
+            </p>
+          </div>
+          <!-- HeroImage -->
+          <div>
+            <img
+              src="./assets/images/hero-vegetables.png"
+              alt="Hero Vegetables Image"
+              class="mx-auto"
+            />
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <!-- Main -->
+    <main class="container mx-auto"></main>
+
+    <!-- Footer -->
+    <footer></footer>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- CustomTailwindStyle -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              "primary-color": "#179800",
+              "text-primary": "#111111",
+              "text-secondary": "rgba(17, 17, 17, 0.7)",
+              "secondary-white": "#EFEBE3",
+            },
+          },
+        },
+      };
+    </script>
+  </body>
+</html>
