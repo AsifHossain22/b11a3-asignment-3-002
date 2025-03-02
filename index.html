@@ -19,24 +19,31 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Sora:wght@100..800&display=swap"
       rel="stylesheet"
     />
 
     <!-- CustomGlobalStyle -->
     <style>
+      .font-adlam-display {
+        font-family: "ADLaM Display", system-ui;
+      }
       .font-sora {
         font-family: "Sora", sans-serif;
       }
-      .bg-gradient-color {
+      .header-bg-gradient-color {
         background: #ffffff;
         background: linear-gradient(180deg, #ffffff, #efebe3);
+      }
+      .product-bg-gradient-color {
+        background: #54db3b;
+        background: linear-gradient(135deg, #54db3b, #ffffff);
       }
     </style>
   </head>
   <body class="font-sora">
     <!-- Header -->
-    <header class="bg-gradient-color">
+    <header class="header-bg-gradient-color">
       <!-- Navbar -->
       <nav class="container mx-auto py-5">
         <div class="navbar justify-between p-0">
@@ -58,10 +65,24 @@
               </ul>
             </div>
 
-            <!-- Logo -->
-            <a href="" class="block hover:bg-transparent md:px-4 pr-4 lg:pr-0">
+            <!-- DesktopLogo -->
+            <a
+              href=""
+              class="hidden lg:block hover:bg-transparent md:px-4 pr-4 lg:pr-0"
+            >
               <img
                 src="./assets/images/logo-header.png"
+                alt="Header Navbar Logo"
+                class="pl-4 lg:pl-0"
+              />
+            </a>
+            <!-- MobileLogo -->
+            <a
+              href=""
+              class="block lg:hidden hover:bg-transparent md:px-4 pr-4 lg:pr-0"
+            >
+              <img
+                src="./assets/images/mobile-logo.png"
                 alt="Header Navbar Logo"
                 class="pl-4 lg:pl-0"
               />
@@ -75,15 +96,15 @@
                 <a
                   href=""
                   class="text-text-primary text-base font-semibold hover:text-primary-color hover:bg-transparent"
-                  >Product</a
-                >
+                  >Product
+                </a>
               </li>
               <li>
                 <a
                   href=""
                   class="text-text-primary text-base font-semibold hover:text-primary-color hover:bg-transparent"
-                  >Services</a
-                >
+                  >Services
+                </a>
               </li>
               <li>
                 <a
@@ -128,7 +149,7 @@
               On, Prices You’ll Love!
             </h1>
             <!-- HeroDescription -->
-            <p class="text-text-primary text-sm lg:text-xl px-10">
+            <p class="text-text-primary text-sm lg:text-lg px-10">
               Shop your daily essentials at unbeatable prices. From fresh
               produce to pantry staples, we’ve got you covered every day!
             </p>
@@ -146,9 +167,9 @@
     </header>
 
     <!-- Main -->
-    <main class="container mx-auto">
+    <main class="">
       <!-- ServiceSection -->
-      <section class="py-12 md:py-16 lg:py-32">
+      <section class="py-12 md:py-16 lg:py-32 container mx-auto">
         <!-- SectionTitle -->
         <h2
           class="text-4xl font-semibold text-primary-color pb-12 pl-4 lg:pl-0"
@@ -179,7 +200,7 @@
                 24/7 Services
               </h4>
               <!-- Description -->
-              <p class="text-xl font-light px-1">
+              <p class="text-lg font-light px-1">
                 We’re here for you anytime, day or night! Our team is available
                 24/7 to provide reliable and efficient support whenever you need
                 it.
@@ -206,7 +227,7 @@
                 Fast Delivery
               </h4>
               <!-- Description -->
-              <p class="text-xl font-light px-1">
+              <p class="text-lg font-light px-1">
                 We ensure quick and reliable delivery, so you receive your order
                 on time without any hassle. Speed, efficiency, and customer
                 satisfaction—guaranteed!
@@ -233,12 +254,347 @@
                 Healthy Products
               </h4>
               <!-- Description -->
-              <p class="text-xl font-light px-1">
+              <p class="text-lg font-light px-1">
                 Discover a range of nutritious and wholesome products designed
                 to support your well-being. From organic ingredients to natural
                 supplements, we offer high-quality options for a healthier
                 lifestyle.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PopularProductSection -->
+      <section class="bg-secondary-white">
+        <!-- PopularProductContainer -->
+        <div class="py-12 md:py-16 lg:py-32 container mx-auto">
+          <!-- SectionTitle -->
+          <h2
+            class="text-4xl font-semibold text-primary-color pb-12 pl-4 lg:pl-0"
+          >
+            Popular Products
+          </h2>
+
+          <!-- ProductContainer -->
+          <div class="lg:flex lg:gap-6">
+            <!-- LeftColumn -->
+            <div
+              class="product-bg-gradient-color lg:w-4/12 mx-4 lg:mx-0 mb-10 lg:mb-0 px-8 py-12 pb-10 lg:pb-0 rounded-lg relative"
+            >
+              <!-- Content -->
+              <div class="space-y-5">
+                <!-- Title -->
+                <h2 class="font-adlam-display text-3xl text-white">30% off</h2>
+                <!-- Description -->
+                <p>
+                  Discover a world of treats, toys, and essentials handpicked
+                  for
+                </p>
+                <!-- ButtonContainer -->
+                <div>
+                  <a
+                    href=""
+                    class="text-black bg-white text-base font-semibold hover:text-white hover:bg-primary-color px-8 py-3 rounded-lg duration-300"
+                    >Buy Now
+                  </a>
+                </div>
+              </div>
+              <!-- Image -->
+              <div
+                class="absolute bottom-0 lg:-bottom-10 -right-1 lg:right-0 lg:h-auto"
+              >
+                <img
+                  src="./assets/images/vegetable-offer.png"
+                  alt="Vegetables Offer"
+                  class="w-32 lg:w-60"
+                />
+              </div>
+            </div>
+            <!-- RightColumn -->
+            <div class="lg:w-8/12">
+              <!-- ProductItemContainer -->
+              <div class="grid grid-cols-2 lg:grid-cols-3 gap-6 px-5 lg:px-0">
+                <!-- Product - 1 -->
+                <div
+                  class="flex items-center gap-4 bg-white p-3 lg:p-4 rounded-lg"
+                >
+                  <!-- Image -->
+                  <div class="bg-secondary-white rounded-lg">
+                    <img src="./assets/images/onion.png" alt="Onion" />
+                  </div>
+                  <!-- Content -->
+                  <div>
+                    <!-- Ratings -->
+                    <div>
+                      <div class="rating lg:rating-sm">
+                        <input
+                          type="radio"
+                          class="mask mask-star-2 bg-[#FFC107] mr-1 text-sm lg:text-base"
+                          aria-label="1 star"
+                        />
+                        4.5
+                      </div>
+                    </div>
+                    <!-- Title -->
+                    <h5
+                      class="text-xs lg:text-lg font-medium text-text-primary"
+                    >
+                      Onion 1 KG
+                    </h5>
+                    <!-- Price -->
+                    <p class="font-medium text-xs lg:text-base">$39.99</p>
+                  </div>
+                </div>
+                <!-- Product - 2 -->
+                <div
+                  class="flex items-center gap-4 bg-white p-3 lg:p-4 rounded-lg"
+                >
+                  <!-- Image -->
+                  <div class="bg-secondary-white rounded-lg">
+                    <img src="./assets/images/tomato.png" alt="Tomato" />
+                  </div>
+                  <!-- Content -->
+                  <div>
+                    <!-- Ratings -->
+                    <div>
+                      <div class="rating lg:rating-sm">
+                        <input
+                          type="radio"
+                          class="mask mask-star-2 bg-[#FFC107] mr-1 text-sm lg:text-base"
+                          aria-label="1 star"
+                        />
+                        4.5
+                      </div>
+                    </div>
+                    <!-- Title -->
+                    <h5
+                      class="text-xs lg:text-lg font-medium text-text-primary"
+                    >
+                      Tomato 1 KG
+                    </h5>
+                    <!-- Price -->
+                    <p class="font-medium text-xs lg:text-base">$39.99</p>
+                  </div>
+                </div>
+                <!-- Product - 3 -->
+                <div
+                  class="flex items-center gap-4 bg-white p-3 lg:p-4 rounded-lg"
+                >
+                  <!-- Image -->
+                  <div class="bg-secondary-white rounded-lg">
+                    <img src="./assets/images/potato.png" alt="Potato" />
+                  </div>
+                  <!-- Content -->
+                  <div>
+                    <!-- Ratings -->
+                    <div>
+                      <div class="rating lg:rating-sm">
+                        <input
+                          type="radio"
+                          class="mask mask-star-2 bg-[#FFC107] mr-1 text-sm lg:text-base"
+                          aria-label="1 star"
+                        />
+                        4.5
+                      </div>
+                    </div>
+                    <!-- Title -->
+                    <h5
+                      class="text-xs lg:text-lg font-medium text-text-primary"
+                    >
+                      Potato 1KG
+                    </h5>
+                    <!-- Price -->
+                    <p class="font-medium text-xs lg:text-base">$39.99</p>
+                  </div>
+                </div>
+                <!-- Product - 4 -->
+                <div
+                  class="flex items-center gap-4 bg-white p-3 lg:p-4 rounded-lg"
+                >
+                  <!-- Image -->
+                  <div class="bg-secondary-white rounded-lg">
+                    <img src="./assets/images/potato.png" alt="Potato" />
+                  </div>
+                  <!-- Content -->
+                  <div>
+                    <!-- Ratings -->
+                    <div>
+                      <div class="rating lg:rating-sm">
+                        <input
+                          type="radio"
+                          class="mask mask-star-2 bg-[#FFC107] mr-1 text-sm lg:text-base"
+                          aria-label="1 star"
+                        />
+                        4.5
+                      </div>
+                    </div>
+                    <!-- Title -->
+                    <h5
+                      class="text-xs lg:text-lg font-medium text-text-primary"
+                    >
+                      Potato 1KG
+                    </h5>
+                    <!-- Price -->
+                    <p class="font-medium text-xs lg:text-base">$39.99</p>
+                  </div>
+                </div>
+                <!-- Product - 5 -->
+                <div
+                  class="flex items-center gap-4 bg-white p-3 lg:p-4 rounded-lg"
+                >
+                  <!-- Image -->
+                  <div class="bg-secondary-white rounded-lg">
+                    <img src="./assets/images/onion.png" alt="Onion" />
+                  </div>
+                  <!-- Content -->
+                  <div>
+                    <!-- Ratings -->
+                    <div>
+                      <div class="rating lg:rating-sm">
+                        <input
+                          type="radio"
+                          class="mask mask-star-2 bg-[#FFC107] mr-1 text-sm lg:text-base"
+                          aria-label="1 star"
+                        />
+                        4.5
+                      </div>
+                    </div>
+                    <!-- Title -->
+                    <h5
+                      class="text-xs lg:text-lg font-medium text-text-primary"
+                    >
+                      Onion 1 KG
+                    </h5>
+                    <!-- Price -->
+                    <p class="font-medium text-xs lg:text-base">$39.99</p>
+                  </div>
+                </div>
+                <!-- Product - 6 -->
+                <div
+                  class="flex items-center gap-4 bg-white p-3 lg:p-4 rounded-lg"
+                >
+                  <!-- Image -->
+                  <div class="bg-secondary-white rounded-lg">
+                    <img src="./assets/images/tomato.png" alt="Tomato" />
+                  </div>
+                  <!-- Content -->
+                  <div>
+                    <!-- Ratings -->
+                    <div>
+                      <div class="rating lg:rating-sm">
+                        <input
+                          type="radio"
+                          class="mask mask-star-2 bg-[#FFC107] mr-1 text-sm lg:text-base"
+                          aria-label="1 star"
+                        />
+                        4.5
+                      </div>
+                    </div>
+                    <!-- Title -->
+                    <h5
+                      class="text-xs lg:text-lg font-medium text-text-primary"
+                    >
+                      Tomato 1 KG
+                    </h5>
+                    <!-- Price -->
+                    <p class="font-medium text-xs lg:text-base">$39.99</p>
+                  </div>
+                </div>
+                <!-- Product - 7 -->
+                <div
+                  class="flex items-center gap-4 bg-white p-3 lg:p-4 rounded-lg"
+                >
+                  <!-- Image -->
+                  <div class="bg-secondary-white rounded-lg">
+                    <img src="./assets/images/tomato.png" alt="Tomato" />
+                  </div>
+                  <!-- Content -->
+                  <div>
+                    <!-- Ratings -->
+                    <div>
+                      <div class="rating lg:rating-sm">
+                        <input
+                          type="radio"
+                          class="mask mask-star-2 bg-[#FFC107] mr-1 text-sm lg:text-base"
+                          aria-label="1 star"
+                        />
+                        4.5
+                      </div>
+                    </div>
+                    <!-- Title -->
+                    <h5
+                      class="text-xs lg:text-lg font-medium text-text-primary"
+                    >
+                      Tomato 1 KG
+                    </h5>
+                    <!-- Price -->
+                    <p class="font-medium text-xs lg:text-base">$39.99</p>
+                  </div>
+                </div>
+                <!-- Product - 8 -->
+                <div
+                  class="flex items-center gap-4 bg-white p-3 lg:p-4 rounded-lg"
+                >
+                  <!-- Image -->
+                  <div class="bg-secondary-white rounded-lg">
+                    <img src="./assets/images/potato.png" alt="Potato" />
+                  </div>
+                  <!-- Content -->
+                  <div>
+                    <!-- Ratings -->
+                    <div>
+                      <div class="rating lg:rating-sm">
+                        <input
+                          type="radio"
+                          class="mask mask-star-2 bg-[#FFC107] mr-1 text-sm lg:text-base"
+                          aria-label="1 star"
+                        />
+                        4.5
+                      </div>
+                    </div>
+                    <!-- Title -->
+                    <h5
+                      class="text-xs lg:text-lg font-medium text-text-primary"
+                    >
+                      Potato 1KG
+                    </h5>
+                    <!-- Price -->
+                    <p class="font-medium text-xs lg:text-base">$39.99</p>
+                  </div>
+                </div>
+                <!-- Product - 9 -->
+                <div
+                  class="hidden lg:flex items-center gap-4 bg-white p-3 lg:p-4 rounded-lg"
+                >
+                  <!-- Image -->
+                  <div class="bg-secondary-white rounded-lg">
+                    <img src="./assets/images/onion.png" alt="Onion" />
+                  </div>
+                  <!-- Content -->
+                  <div>
+                    <!-- Ratings -->
+                    <div>
+                      <div class="rating lg:rating-sm">
+                        <input
+                          type="radio"
+                          class="mask mask-star-2 bg-[#FFC107] mr-1 text-sm lg:text-base"
+                          aria-label="1 star"
+                        />
+                        4.5
+                      </div>
+                    </div>
+                    <!-- Title -->
+                    <h5
+                      class="text-xs lg:text-lg font-medium text-text-primary"
+                    >
+                      Onion 1 KG
+                    </h5>
+                    <!-- Price -->
+                    <p class="font-medium text-xs lg:text-base">$39.99</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
