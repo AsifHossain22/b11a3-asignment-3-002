@@ -39,13 +39,19 @@
         background: #54db3b;
         background: linear-gradient(135deg, #54db3b, #ffffff);
       }
+      #feedback {
+        background: url(./assets/images/feedback.jpg) no-repeat center center;
+        background-size: cover;
+      }
     </style>
   </head>
   <body class="font-sora">
     <!-- Header -->
     <header class="header-bg-gradient-color">
       <!-- Navbar -->
-      <nav class="container mx-auto py-5">
+      <nav
+        class="container mx-auto lg:py-5 bg-transparent border-b border-primary-color lg:border-none"
+      >
         <div class="navbar justify-between p-0">
           <div
             class="w-full lg:w-auto justify-between flex-row-reverse lg:flex-row"
@@ -57,7 +63,7 @@
               </div>
               <ul
                 tabindex="0"
-                class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 pr-20 w-52 p-2 shadow hidden"
+                class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-32 right-3 shadow"
               >
                 <li><a>Product</a></li>
                 <li><a>Services</a></li>
@@ -136,7 +142,7 @@
         <!-- HeroContent -->
         <div class="text-center space-y-8">
           <!-- TextContent -->
-          <div class="space-y-4 lg:space-y-8 lg:px-44">
+          <div class="space-y-4 lg:space-y-8 lg:px-44 relative">
             <!-- HeroTitle -->
             <h1
               class="text-text-primary text-2xl md:text-4xl lg:text-6xl font-semibold"
@@ -153,6 +159,16 @@
               Shop your daily essentials at unbeatable prices. From fresh
               produce to pantry staples, we’ve got you covered every day!
             </p>
+            <!-- AnimatedItem -->
+            <div
+              class="absolute top-[-10px] lg:-top-7 right-8 lg:right-64 animate-ping"
+            >
+              <img
+                src="./assets/images/mobile-logo.png"
+                alt="Animated Logo"
+                class="w-5 lg:w-10"
+              />
+            </div>
           </div>
           <!-- HeroImage -->
           <div>
@@ -260,6 +276,72 @@
                 supplements, we offer high-quality options for a healthier
                 lifestyle.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FeedbackSection -->
+      <section
+        class="py-12 pt-0 md:py-16 lg:py-32 container mx-auto lg:mt-[-128px]"
+      >
+        <!-- SectionTitle -->
+        <h2
+          class="text-4xl font-semibold text-primary-color pb-12 pl-4 lg:pl-0"
+        >
+          Customers Feedback
+        </h2>
+
+        <!-- FeedbackContainer -->
+        <div id="feedback" class="rounded-lg py-14 px-8 mx-4 lg:mx-0">
+          <!-- Title -->
+          <h3 class="text-center text-white text-3xl font-bold pb-5 lg:pb-10">
+            What they say
+          </h3>
+          <!-- Description -->
+          <p class="text-center text-white w-10/12 lg:w-8/12 mx-auto">
+            Hear what our satisfied customers have to say! We value your
+            feedback as it helps us improve and continue providing top-quality
+            cleaning services. Share your experience with us!
+          </p>
+
+          <!-- ClientFeedbackSlider -->
+          <div class="carousel w-full">
+            <div id="slide1" class="carousel-item relative w-full">
+              <img src="./assets/images/hero-vegetables.png" class="w-full" />
+              <div
+                class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between"
+              >
+                <a href="#slide4" class="btn btn-circle">❮</a>
+                <a href="#slide2" class="btn btn-circle">❯</a>
+              </div>
+            </div>
+            <div id="slide2" class="carousel-item relative w-full">
+              <img src="./assets/images/hero-vegetables.png" class="w-full" />
+              <div
+                class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between"
+              >
+                <a href="#slide1" class="btn btn-circle">❮</a>
+                <a href="#slide3" class="btn btn-circle">❯</a>
+              </div>
+            </div>
+            <div id="slide3" class="carousel-item relative w-full">
+              <img src="./assets/images/hero-vegetables.png" class="w-full" />
+              <div
+                class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between"
+              >
+                <a href="#slide2" class="btn btn-circle">❮</a>
+                <a href="#slide4" class="btn btn-circle">❯</a>
+              </div>
+            </div>
+            <div id="slide4" class="carousel-item relative w-full">
+              <img src="./assets/images/hero-vegetables.png" class="w-full" />
+              <div
+                class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between"
+              >
+                <a href="#slide3" class="btn btn-circle">❮</a>
+                <a href="#slide1" class="btn btn-circle">❯</a>
+              </div>
             </div>
           </div>
         </div>
@@ -601,7 +683,9 @@
       </section>
 
       <!-- ArrivalOfferSection -->
-      <section class="container mx-auto py-12 md:py-16 lg:py-32 lg:pb-80 pb-20">
+      <section
+        class="container mx-auto py-12 md:py-16 lg:py-32 pb-[400px] lg:pb-80"
+      >
         <!-- SectionTitle -->
         <h2
           class="text-4xl font-semibold text-primary-color pb-12 pl-4 lg:pl-0"
@@ -683,10 +767,10 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-primary-color lg:pt-80 relative space-y-5 lg:space-y-0">
+    <footer class="bg-primary-color pb-10">
       <!-- GetGroceryNewsContainer -->
       <div
-        class="container lg:mx-auto rounded-3xl py-14 bg-secondary-white text-center lg:text-left lg:flex items-center relative -top-5 lg:absolute lg:-top-56 lg:left-2/4 lg:-translate-x-2/4 mx-auto"
+        class="lg:container lg:mx-auto rounded-3xl py-14 bg-secondary-white text-center lg:text-left lg:flex items-center relative lg:-top-56 top-[-320px] mx-4"
       >
         <!-- Image -->
         <div class="lg:basis-1/2">
@@ -726,21 +810,23 @@
       </div>
 
       <!-- FooterContent -->
-      <div class="container mx-auto lg:flex justify-between">
+      <div
+        class="lg:container lg:mx-auto lg:flex lg:justify-between mt-[-250px] lg:mt-0"
+      >
         <!-- LeftColumn -->
-        <div class="px-4 lg:px-0 pb-10 lg:pb-0">
+        <div class="pl-5 lg:pl-0 pb-10 lg:pb-0 lg:-mt-[120px]">
           <!-- Logo -->
           <div class="pb-2">
             <img src="./assets/images/logo-footer.png" alt="Footer Logo" />
           </div>
           <!-- Content -->
-          <p class="text-white w-6/12">
+          <p class="text-white w-10/12 lg:w-6/12">
             Discover a world of treats, toys, and essentials handpicked for your
             furry friends
           </p>
         </div>
         <!-- CenterColumn -->
-        <div class="px-4 lg:px-0 pb-10 lg:pb-0">
+        <div class="pl-5 lg:pl-0 pb-10 lg:pb-0 lg:-mt-[120px] space-y-3">
           <li class="list-none">
             <a
               href=""
@@ -764,7 +850,7 @@
           </li>
         </div>
         <!-- RightColumn -->
-        <div class="px-4 lg:px-0">
+        <div class="pl-5 lg:pl-0 lg:-mt-[120px]">
           <h6 class="text-white font-medium pb-3">Follow Us</h6>
           <!-- IconContainer -->
           <div class="flex gap-3">
